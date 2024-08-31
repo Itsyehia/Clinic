@@ -43,37 +43,33 @@
 
 <div class="page-wrapper">
 
-    <!-- Header Section -->
+    <!-- header -->
     <header class="header">
 
-        <!-- Sticky Navigation Bar -->
         <header class="sticky" style="background: var(--clr-blue);">
-            <!-- Logo -->
-            <a href="#" class="logo" style="text-decoration: none;">
+            <a href="#" class="logo" style="text-decoration: none;  ">
                 <h3>Clinic</h3>
             </a>
-            <!-- Navigation Menu -->
             <ul class="navmenu">
-                <li><a href="/landing">Home</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="/landing">home</a></li>
+                <li><a href="#">shop</a></li>
                 <li><a href="#">Book</a></li>
             </ul>
-            <!-- Navigation Icons -->
             <div class="nav-icon">
                 <a href="/search"><i class='bx bx-search-alt-2'></i></a>
-                <a href="/login"><i class='bx bx-user'></i></a>
+                <a href="/login"><i class='bx bx-user'></i> </a>
                 <a href="/register"><i class='bx bx-user-plus'></i></a>
-                <!-- Burger Menu Icon for Mobile View -->
                 <div id="menu-icon">
                     <a href="#" class="menu" id="burger-menu"><i class='bx bx-menu'></i></a>
                 </div>
             </div>
         </header>
 
-        <!-- Banner Section -->
         <div class="element-one">
-            <img src="{% static 'images/element-img-1.png' %}" alt="Banner Decoration">
+
+            <img src="{% static 'images/element-img-1.png' %}" alt="">
         </div>
+
         <div class="banner">
             <div class="container">
                 <div class="banner-content">
@@ -81,50 +77,95 @@
                         <div class="content-wrapper">
                             <h1 class="banner-title">Virtual healthcare <br> for you</h1>
                             <p class="text text-white">Medimoor provides progressive, and affordable healthcare,
-                                accessible on mobile and online for everyone</p>
+                                accessible on mobile and onnline for everyone</p>
                             <a href="#" class="btn btn-secondary">Consult today</a>
                         </div>
                     </div>
+
                     <div class="banner-right d-flex align-items-center justify-content-end">
-                        <img src="{% static 'images/banner-image.png' %}" alt="Healthcare Image">
+
+                        <img src="{% static 'images/banner-image.png' %}" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- End of Header Section -->
+    <!-- end of header -->
 
-    <!-- Main Content Section -->
     <main>
-        <!-- Services Section -->
         <section class="sc-services">
             <div class="services-shape">
-                <img src="{% static 'images/curve-shape-1.png' %}" alt="Services Decoration">
+
+                <img src=" {% static 'images/curve-shape-1.png' %}" alt="">
             </div>
             <div class="container">
                 <div class="services-content">
                     <div class="title-box text-center">
                         <div class="content-wrapper">
-                            <h3 class="title-box-name">Our Services</h3>
+                            <h3 class="title-box-name">Our services</h3>
                             <div class="title-separator mx-auto"></div>
                             <p class="text title-box-text">We provide you the best choices for you. Adjust it to your
-                                health needs and make sure you undergo treatment with our highly qualified doctors. Consult with us to determine which service is suitable for your health.</p>
+                                health needs and make sure you undergo treatment with our highly qualified doctors you
+                                can consult with us which type of service is suitable for your health</p>
                         </div>
                     </div>
-                    <!-- List of Services -->
+
                     <div class="services-list">
-                        <!-- Service Item -->
                         <div class="services-item">
                             <div class="item-icon">
-                                <img src="{% static 'images/service-icon-1.png' %}" alt="Search Doctor Icon">
+
+                                <img src="{% static 'images/service-icon-1.png' %}" alt="service icon">
                             </div>
                             <h5 class="item-title fw-7">Search doctor</h5>
-                            <p class="text">Choose your doctor from thousands of specialists, general practitioners, and trusted hospitals.</p>
+                            <p class="text">Choose your doctor form thousands of specialist, general and trusted
+                                hospitals.</p>
                         </div>
-                        <!-- Repeat for other services -->
-                        <!-- ... -->
+
+                        <div class="services-item">
+                            <div class="item-icon">
+                                <img src="{% static 'images/service-icon-2.png' %}" alt="service icon">
+                            </div>
+                            <h5 class="item-title fw-7">Online pharmacy</h5>
+                            <p class="text">Buy your medicines with our mobile application with a simple delivery
+                                system</p>
+                        </div>
+
+                        <div class="services-item">
+                            <div class="item-icon">
+                                <img src="{% static 'images/service-icon-3.png' %}" alt="service icon">
+                            </div>
+                            <h5 class="item-title fw-7">Consultation</h5>
+                            <p class="text">Free consultation with our trusted doctors and get the best
+                                recommendations.</p>
+                        </div>
+
+                        <div class="services-item">
+                            <div class="item-icon">
+                                <img src="{% static 'images/service-icon-4.png' %}" alt="service icon">
+                            </div>
+                            <h5 class="item-title fw-7">Details info</h5>
+                            <p class="text">Free consultation with our trusted doctors and get the best
+                                recommendations.</p>
+                        </div>
+
+                        <div class="services-item">
+                            <div class="item-icon">
+                                <img src="{% static 'images/service-icon-5.png' %}" alt="service icon">
+                            </div>
+                            <h5 class="item-title fw-7">Emergency care</h5>
+                            <p class="text">You can get 24/7 urgent care for yourself or your children and your lovely
+                                family.</p>
+                        </div>
+
+                        <div class="services-item">
+                            <div class="item-icon">
+                                <img src="{% static 'images/service-icon-6.png' %}" alt="service icon">
+                            </div>
+                            <h5 class="item-title fw-7">Tracking</h5>
+                            <p class="text">Track and save your mental history and health data</p>
+                        </div>
                     </div>
-                    <!-- Learn More Button -->
+
                     <div class="d-flex align-items-center justify-content-center services-main-btn">
                         <button type="button" class="btn btn-primary-outline">Learn more</button>
                     </div>
@@ -132,20 +173,22 @@
             </div>
         </section>
 
-        <!-- Healthcare Providers Section -->
         <section class="sc-grid sc-grid-one">
             <div class="container">
                 <div class="grid-content d-grid align-items-center">
                     <div class="grid-img">
-                        <img src="{% static 'images/health-care-img.png' %}" alt="Healthcare Providers Image">
+                        <img src=" {% static 'images/health-care-img.png' %}" alt="">
                     </div>
                     <div class="grid-text">
                         <div class="content-wrapper text-start">
                             <div class="title-box">
-                                <h3 class="title-box-name text-white">Leading Healthcare Providers</h3>
+                                <h3 class="title-box-name text-white">Leading healthcare providers</h3>
                                 <div class="title-separator mx-auto"></div>
                             </div>
-                            <p class="text title-box-text text-white">Medimoor provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver.</p>
+
+                            <p class="text title-box-text text-white">Medimoor provides progressive, and affordable
+                                healthcare, accessible on mobile and online for everyone. To us, it's not just work. We
+                                take pride in the solutions we deliver</p>
                             <button type="button" class="btn btn-white-outline">Learn more</button>
                         </div>
                     </div>
@@ -153,23 +196,25 @@
             </div>
         </section>
 
-        <!-- Mobile Apps Download Section -->
         <section class="sc-grid sc-grid-two">
             <div class="container">
                 <div class="grid-content d-grid align-items-center">
                     <div class="grid-img">
-                        <img src="{% static 'images/download-image.png' %}" alt="Download Mobile Apps Image">
+
+                        <img src="{% static 'images/download-image.png' %}" alt="">
                     </div>
                     <div class="grid-text">
                         <div class="content-wrapper text-start">
                             <div class="title-box">
-                                <h3 class="title-box-name">Download Our Mobile Apps</h3>
+                                <h3 class="title-box-name">Download our mobile apps</h3>
                                 <div class="title-separator mx-auto"></div>
                             </div>
-                            <p class="text title-box-text">Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious forms, long calls, or administrative hassle) and securely.</p>
+                            <p class="text title-box-text">Our dedicated patient engagement app and web portal allow you
+                                to access information instantaneously (no tedeous form, long calls, or administrative
+                                hassle) and securely</p>
                             <button type="button" class="btn btn-primary-outline">
                                 Download
-                                <img src="{% static 'images/arrow-down.svg' %}" alt="Download Arrow">
+                                <img src="{% static 'images/arrow-down.svg' %}"/>
                             </button>
                         </div>
                     </div>
@@ -177,29 +222,28 @@
             </div>
         </section>
 
-        <!-- Customer Feedback Section -->
         <section class="sc-feedback">
             <div class="container">
                 <div class="feedback-content">
                     <div class="feedback-element">
-                        <img src="{% static 'images/element-img-3.png' %}" alt="Feedback Decoration 1">
+
+                        <img src="{% static 'images/element-img-3.png' %}">
                     </div>
                     <div class="feedback-element-2">
-                        <img src="{% static 'images/element-img-5.png' %}" alt="Feedback Decoration 2">
+                        <img src="{% static 'images/element-img-5.png' %}">
                     </div>
                     <div class="title-box text-center">
                         <div class="content-wrapper">
-                            <h3 class="title-box-name text-white">What Our Customers Are Saying</h3>
+                            <h3 class="title-box-name text-white">What our customer are saying</h3>
                             <div class="title-separator mx-auto"></div>
                         </div>
                     </div>
-                    <!-- Feedback Slider -->
+
                     <div class="feedback-list feedback-slider owl-carousel owl-theme">
-                        <!-- Feedback Item -->
                         <div class="feedback-item d-grid">
                             <div class="item-left d-flex align-items-center">
                                 <div class="item-img">
-                                    <img src="{% static 'images/person-image.png' %}" alt="Customer Image">
+                                    <img src="{% static 'images/person-image.png' %}" alt="">
                                 </div>
                                 <div class="item-info text-white">
                                     <p class="fw-7 name">Edward Newgate</p>
@@ -207,83 +251,194 @@
                                 </div>
                             </div>
                             <div class="item-right">
-                                <p class="text text-white">"Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious forms, long calls, or administrative hassle) and securely."</p>
+                                <p class="text text-white">"Our dedicated patient engagement app and web portal allow
+                                    you to access information instantaneoulsy (no tedeous form, long calls, or
+                                    administrative hassle) and securely"</p>
                             </div>
                         </div>
-                        <!-- Repeat for other feedback items -->
-                        <!-- ... -->
+
+                        <div class="feedback-item d-grid">
+                            <div class="item-left d-flex align-items-center">
+                                <div class="item-img">
+
+
+                                    <img src=" {% static 'images/person-image.png' %}" alt="">
+                                </div>
+                                <div class="item-info text-white">
+                                    <p class="fw-7 name">Edward Newgate</p>
+                                    <span class="designation fw-4">Founder Circle</span>
+                                </div>
+                            </div>
+                            <div class="item-right">
+                                <p class="text text-white">"Our dedicated patient engagement app and web portal allow
+                                    you to access information instantaneoulsy (no tedeous form, long calls, or
+                                    administrative hassle) and securely"</p>
+                            </div>
+                        </div>
+
+                        <div class="feedback-item d-grid">
+                            <div class="item-left d-flex align-items-center">
+                                <div class="item-img">
+
+                                    <img src=" {% static 'images/person-image.png' %}" alt="">
+                                </div>
+                                <div class="item-info text-white">
+                                    <p class="fw-7 name">Simon Paul</p>
+                                    <span class="designation fw-4">Founder Circle</span>
+                                </div>
+                            </div>
+                            <div class="item-right">
+                                <p class="text text-white">"Our dedicated patient engagement app and web portal allow
+                                    you to access information instantaneoulsy (no tedeous form, long calls, or
+                                    administrative hassle) and securely"</p>
+                            </div>
+                        </div>
+
+                        <div class="feedback-item d-grid">
+                            <div class="item-left d-flex align-items-center">
+                                <div class="item-img">
+                                    <img src=" {% static 'images/person-image.png' %}" alt="">
+                                </div>
+                                <div class="item-info text-white">
+                                    <p class="fw-7 name">John Doe</p>
+                                    <span class="designation fw-4">Founder Circle</span>
+                                </div>
+                            </div>
+                            <div class="item-right">
+                                <p class="text text-white">"Our dedicated patient engagement app and web portal allow
+                                    you to access information instantaneoulsy (no tedeous form, long calls, or
+                                    administrative hassle) and securely"</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Latest Articles Section -->
         <section class="sc-articles">
             <div class="articles-shape">
-                <img src="{% static 'images/curve-shape-2.png' %}" alt="Articles Decoration">
+
+
+                <img src=" {% static 'images/curve-shape-2.png' %}" alt="">
             </div>
             <div class="container">
                 <div class="articles-content">
                     <div class="articles-element">
-                        <img src="{% static 'images/element-img-2.png' %}" alt="Articles Decoration 2">
+
+                        <img src="{% static 'images/element-img-2.png' %}" alt="">
                     </div>
                     <div class="title-box text-center">
                         <div class="content-wrapper">
-                            <h3 class="title-box-name">Check Out Our Latest Articles</h3>
+                            <h3 class="title-box-name">Check out our latest article</h3>
                             <div class="title-separator mx-auto"></div>
                         </div>
                     </div>
-                    <!-- Articles List -->
+
                     <div class="articles-list d-flex flex-wrap justify-content-center">
-                        <!-- Article Item -->
                         <article class="articles-item">
                             <div class="item-img">
-                                <img src="{% static 'images/article-img-1.png' %}" alt="Article 1 Image">
+
+
+                                <img src="{% static 'images/article-img-1.png' %}">
                             </div>
                             <div class="item-body">
-                                <div class="item-title">Disease Detection, Check Up in the Laboratory</div>
-                                <p class="text">In this case, the role of the health laboratory is very important to do disease detection ...</p>
+                                <div class="item-title">Disease detection, check up in the laboratory</div>
+                                <p class="text">In this case, the role of the health laboratory is very important to do
+                                    a disease detection ...</p>
                                 <a href="#" class="item-link text-blue d-flex align-items-baseline">
                                     <span class="item-link-text">Read more</span>
                                     <span class="item-link-icon">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </span>
+                                                <i class="fas fa-arrow-right"></i>
+                                            </span>
                                 </a>
                             </div>
                         </article>
-                        <!-- Repeat for other articles -->
-                        <!-- ... -->
+
+                        <article class="articles-item">
+                            <div class="item-img">
+                                <img src="{% static 'images/article-img-2.png' %}">
+                            </div>
+                            <div class="item-body">
+                                <div class="item-title">Herbal medicines that are safe for consumption</div>
+                                <p class="text">Herbal medicine is very widely used at this time because of its very
+                                    good for your health ...</p>
+                                <a href="#" class="item-link text-blue d-flex align-items-baseline">
+                                    <span class="item-link-text">Read more</span>
+                                    <span class="item-link-icon">
+                                                <i class="fas fa-arrow-right"></i>
+                                            </span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="articles-item">
+                            <div class="item-img">
+                                <img src="{% static 'images/article-img-3.png' %}">
+                            </div>
+                            <div class="item-body">
+                                <div class="item-title">Natural care for healthy facial skin</div>
+                                <p class="text">A healthy lifestyle should start from now and also for your skin health
+                                    ...</p>
+                                <a href="#" class="item-link text-blue d-flex align-items-baseline">
+                                    <span class="item-link-text">Read more</span>
+                                    <span class="item-link-icon">
+                                                <i class="fas fa-arrow-right"></i>
+                                            </span>
+                                </a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <!-- End of Main Content Section -->
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <!-- Footer Links and Branding -->
-            <div class="footer-logo">
-                <a href="#" class="logo">
-                    <h3>Clinic</h3>
-                </a>
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <!-- Footer Branding -->
-            <div class="footer-branding">
-                <p>&copy; 2024 Clinic. All rights reserved.</p>
+    <!--==================== Footer ====================-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-list d-grid text-white">
+                    <div class="footer-item">
+                        <a href="#" class="navbar-brand d-flex align-items-center">
+                            <span class="brand-shape d-inline-block text-white">C</span>
+                            <span class="brand-text fw-7">Clinic</span>
+                        </a>
+                        <p class="text-white">Clinic provides healthcare, accessible
+                            on mobile and online for everyone</p>
+                        <p class="text-white copyright-text">&copy; Clinic 2024. All rights reserved.</p>
+                    </div>
+
+                    <div class="footer-item">
+                        <h3 class="footer-item-title">Company</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Find a doctor</a></li>
+                            <li><a href="#">Apps</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-item">
+                        <h3 class="footer-item-title">Help</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Contact support</a></li>
+                            <li><a href="#">Instructions</a></li>
+                            <li><a href="#">How it works</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="footer-element-1">
+            <img src="{% static 'images/element-img-4.png' %}" alt="">
+        </div>
+        <div class="footer-element-2">
+            <img src="{% static 'images/element-img-5.png' %}" alt="">
+        </div>
     </footer>
-    <!-- End of Footer Section -->
+    <!-- End of Footer -->
 
 </div>
 
@@ -314,15 +469,6 @@
         menu.classList.toggle('bx-x');
         navmenu.classList.toggle('open');
     }
-
-
-
-
-
-
 </script>
-
 </body>
 </html>
-
-
