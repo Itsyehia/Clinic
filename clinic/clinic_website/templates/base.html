@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Clinic Website{% endblock %}</title>
+
+    <!-- Custom CSS -->
+    <!--    <link rel="stylesheet" href="{% static 'css/main.css' %}">-->
+    <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+
+
+<!--==================== MAIN CONTENT ====================-->
+
+<main>
+    <div class="page-wrapper">
+
+        {% block content %}
+        <!-- Default content goes here if not overridden -->
+        {% endblock %}
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-list d-grid text-white">
+                        <div class="footer-item">
+                            <a href="#" class="navbar-brand d-flex align-items-center">
+                                <span class="brand-shape d-inline-block text-white">C</span>
+                                <span class="brand-text fw-7">Clinic</span>
+                            </a>
+                            <p class="text-white">Clinic provides healthcare, accessible
+                                on mobile and online for everyone</p>
+                            <p class="text-white copyright-text">&copy; Clinic 2024. All rights reserved.</p>
+                        </div>
+
+                        <div class="footer-item">
+                            <h3 class="footer-item-title">Company</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Find a doctor</a></li>
+                                <li><a href="#">Apps</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="footer-item">
+                            <h3 class="footer-item-title">Help</h3>
+                            <ul class="footer-links">
+                                <li><a href="#">Help center</a></li>
+                                <li><a href="#">Contact support</a></li>
+                                <li><a href="#">Instructions</a></li>
+                                <li><a href="#">How it works</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-element-1">
+                <img src="{% static 'images/element-img-4.png' %}" alt="">
+            </div>
+            <div class="footer-element-2">
+                <img src="{% static 'images/element-img-5.png' %}" alt="">
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+
+    </div>
+</main>
+
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
+<!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Custom JS -->
+<script src="{% static 'js/script.js' %}"></script>
+
+
+<!--script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!--=============== Script for burger menu =============== -->
+<script>
+    const header = document.querySelector("header");
+
+    // make footer sticky
+    window.addEventListener("scroll", function(){
+        header.classList.toggle("sticky" , this.window.scrollY > 0 );
+    });
+    let menu = document.querySelector('#menu-icon');
+    let navmenu = document.querySelector('.navmenu');
+    menu.onclick = () =>{
+        menu.classList.toggle('bx-x');
+        navmenu.classList.toggle('open');
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

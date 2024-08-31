@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+
+    <!-- Icons for UI elements -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <style>
+        /* General body styling */
+        body {
+            font-family: Mulish, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header container styling */
+        .header {
+            position: relative;
+            width: 100%;
+            color: white;
+        }
+
+        /* Sticky header styling */
+        .sticky {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Logo styling */
+        .logo h3 {
+            margin: 0;
+            color: white;
+        }
+
+        /* Navigation menu styling */
+        .navmenu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navmenu li {
+            margin-right: 20px;
+        }
+
+        .navmenu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Navigation icons styling */
+        .nav-icon a {
+            color: white;
+            margin-left: 15px;
+            font-size: 20px;
+        }
+
+        /* Burger menu icon for mobile view */
+        #menu-icon {
+            display: none;
+        }
+
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        /* Container for doctor cards */
+        .doctor-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        /* Individual doctor card styling */
+        .doctor-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: calc(33% - 40px);
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Doctor card hover effects */
+        .doctor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Link styling within doctor cards */
+        .doctor-card a {
+            text-decoration: none;
+            color: #458ff6;
+            font-weight: bold;
+        }
+
+        .doctor-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styling for different screen sizes */
+        @media (max-width: 768px) {
+            .doctor-card {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .doctor-card {
+                width: calc(100% - 40px);
+            }
+
+            #menu-icon {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+{% extends 'base.html' %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+
+<!--==================== HEADER ====================-->
+
+<section class="header">
+    <header class="sticky" style="background: #458ff6;">
+        <a href="#" class="logo" style="text-decoration: none; "><h3>Hello, {{ user.username }}</h3></a>
+        <ul class="navmenu">
+            <li><a href="/landing">home</a></li>
+            <li><a href="#">Book</a></li>
+        </ul>
+        <div class="nav-icon">
+
+            <!-- Search button icon -->
+            <a href="/search"><i class='bx bx-search-alt-2'></i></a>
+
+            <!-- Logout button icon -->
+            <a href="{% url 'logout' %}"><i class='bx bx-log-out-circle'></i></a>
+
+            <!-- Burger menu icon for mobile view -->
+            <div id="menu-icon">
+                <a href="#" class="menu" id="burger-menu"><i class='bx bx-menu'></i></a>
+            </div>
+        </div>
+    </header>
+</section>
+
+<!--==================== SEARCH RESULTS ====================-->
+
+<h1>Search Results</h1>
+<div class="doctor-cards">
+    {% for doctor in doctors %}
+        <div class="doctor-card">
+            <a href="{% url 'doctor_detail' doctor.id %}">{{ doctor.name }}</a>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+</body>
+</html>

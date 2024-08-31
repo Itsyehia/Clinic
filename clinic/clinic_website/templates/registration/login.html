@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Link to Google Fonts for the Mulish font family -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap">
+
+    <!-- Custom CSS for styling -->
+    <style>
+        /* Global reset and font settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            list-style: none;
+            text-decoration: none;
+            --font-family-mulish: 'Mulish', sans-serif;
+            text-transform: capitalize;
+        }
+
+        /* Body styling with background gradient and centering content */
+        body {
+            font-family: var(--font-family-mulish);
+            background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container styling for the login form */
+        .login-container {
+            background: #fff;
+            color: #2c2c2c;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Paragraph styling within the form */
+        form p {
+            margin-bottom: 15px;
+        }
+
+        /* Input field styling */
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #5a98f2;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background: #67c3f3;
+        }
+
+        /* Footer styling (included but not used in this page) */
+        .footer {
+            margin-top: 20px;
+            background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login form container -->
+    <div class="login-container">
+        <h1>Login</h1>
+        <form method="post">
+            <!-- CSRF token for security -->
+            {% csrf_token %}
+            <!-- Render form fields -->
+            {{ form.as_p }}
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

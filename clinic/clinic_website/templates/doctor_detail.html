@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Details</title>
+
+    <!-- Icons for the website -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Custom CSS styling -->
+    <style>
+        /* Root variables for colors and font family */
+        :root {
+            --clr-blue: #458ff6;
+            --clr-black: #000;
+            --clr-white: #fff;
+            --clr-gray: #7d7987;
+            --clr-dark-blue: #233348;
+            --clr-dark-purple: #1f1534;
+            --font-family-mulish: 'Mulish', sans-serif;
+            --transition-default: all 300ms ease-in-out;
+        }
+
+        /* Basic body styling */
+        body {
+            font-family: var(--font-family-mulish);
+            line-height: 1.6;
+            font-weight: 300;
+            background-color: var(--clr-white);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        .header {
+            width: 100%;
+            color: var(--clr-white);
+        }
+
+        /* Sticky header with fixed position */
+        .sticky {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Logo styling */
+        .logo h3 {
+            margin: 0;
+            color: var(--clr-white);
+        }
+
+        /* Navigation menu styling */
+        .navmenu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navmenu li {
+            margin-right: 20px;
+        }
+
+        .navmenu a {
+            text-decoration: none;
+            color: var(--clr-white);
+            font-weight: bold;
+        }
+
+        /* Navigation icons styling */
+        .nav-icon a {
+            color: var(--clr-white);
+            margin-left: 15px;
+            font-size: 20px;
+        }
+
+        /* Hidden menu icon for mobile view */
+        #menu-icon {
+            display: none;
+        }
+
+        /* Doctor card styling */
+        .doctor-card {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--clr-white);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Doctor card image styling */
+        .doctor-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Doctor card heading styling */
+        .doctor-card h1 {
+            color: var(--clr-dark-blue);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Doctor card paragraph styling */
+        .doctor-card p {
+            color: var(--clr-gray);
+            margin: 5px 0;
+        }
+
+        /* Responsive styling for doctor card */
+        @media (max-width: 768px) {
+            .doctor-card {
+                width: calc(100% - 40px);
+                padding: 15px;
+            }
+        }
+
+        /* Button styling */
+        button {
+            padding: 12px 20px;
+            background-color: var(--clr-blue);
+            color: var(--clr-white);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: var(--transition-default);
+            font-family: var(--font-family-mulish);
+        }
+
+        /* Button hover effect */
+        button:hover {
+            color: var(--clr-blue);
+            background-color: var(--clr-white);
+            border: 1px solid var(--clr-blue);
+        }
+
+        /* Button focus effect */
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--clr-blue);
+        }
+    </style>
+</head>
+<body>
+
+{% extends 'base.html' %}
+
+{% block title %}Doctor Details{% endblock %}
+
+{% block content %}
+
+<!--==================== HEADER ====================-->
+
+<section class="header">
+    <!-- Sticky header with background color -->
+    <header class="sticky" style="background: var(--clr-blue);">
+        <!-- Logo with a greeting -->
+        <a href="#" class="logo" style="text-decoration: none;">
+            <h3>Hello, {{ user.username }}</h3>
+        </a>
+        <!-- Navigation menu -->
+        <ul class="navmenu">
+            <li><a href="/landing">Home</a></li>
+            <li><a href="#">Book</a></li>
+        </ul>
+        <!-- Navigation icons -->
+        <div class="nav-icon">
+            <!-- Search button -->
+            <a href="/search"><i class='bx bx-search-alt-2'></i></a>
+            <!-- Logout button -->
+            <a href="{% url 'logout' %}"><i class='bx bx-log-out-circle'></i></a>
+            <!-- Hidden menu icon for mobile view -->
+            <div id="menu-icon">
+                <a href="#" class="menu" id="burger-menu"><i class='bx bx-menu'></i></a>
+            </div>
+        </div>
+    </header>
+</section>
+<!-- End of Header Section -->
+
+<!--==================== DOCTOR CARD ====================-->
+<!-- Card displaying details of a doctor -->
+<div class="doctor-card">
+    <!-- Doctor's image -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQM7x94xJ1Flqd4QPWILRa2yfvf4TVVnyNwQ&s"
+         alt="{{ doctor.name }}">
+    <!-- Doctor's name -->
+    <h1>{{ doctor.name }}</h1>
+    <!-- Doctor's phone number -->
+    <p>Phone: {{ doctor.phone }}</p>
+    <!-- Doctor's address -->
+    <p>Address: {{ doctor.address }}</p>
+    <!-- Button to book an appointment -->
+    <button type="submit">Book Now</button>
+</div>
+<!-- End of Doctor Card Section -->
+
+{% endblock %}
+
+</body>
+</html>

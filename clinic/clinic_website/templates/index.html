@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clinic</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/utilities.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+    <!-- normalize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+</head>
+<body>
+
+
+<div class="page-wrapper">
+
+    <!-- Header Section -->
+    <header class="header">
+
+        <!-- Sticky Navigation Bar -->
+        <header class="sticky" style="background: var(--clr-blue);">
+            <!-- Logo -->
+            <a href="#" class="logo" style="text-decoration: none;">
+                <h3>Clinic</h3>
+            </a>
+            <!-- Navigation Menu -->
+            <ul class="navmenu">
+                <li><a href="/landing">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Book</a></li>
+            </ul>
+            <!-- Navigation Icons -->
+            <div class="nav-icon">
+                <a href="/search"><i class='bx bx-search-alt-2'></i></a>
+                <a href="/login"><i class='bx bx-user'></i></a>
+                <a href="/register"><i class='bx bx-user-plus'></i></a>
+                <!-- Burger Menu Icon for Mobile View -->
+                <div id="menu-icon">
+                    <a href="#" class="menu" id="burger-menu"><i class='bx bx-menu'></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <div class="element-one">
+            <img src="{% static 'images/element-img-1.png' %}" alt="Banner Decoration">
+        </div>
+        <div class="banner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-left">
+                        <div class="content-wrapper">
+                            <h1 class="banner-title">Virtual healthcare <br> for you</h1>
+                            <p class="text text-white">Medimoor provides progressive, and affordable healthcare,
+                                accessible on mobile and online for everyone</p>
+                            <a href="#" class="btn btn-secondary">Consult today</a>
+                        </div>
+                    </div>
+                    <div class="banner-right d-flex align-items-center justify-content-end">
+                        <img src="{% static 'images/banner-image.png' %}" alt="Healthcare Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header Section -->
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Services Section -->
+        <section class="sc-services">
+            <div class="services-shape">
+                <img src="{% static 'images/curve-shape-1.png' %}" alt="Services Decoration">
+            </div>
+            <div class="container">
+                <div class="services-content">
+                    <div class="title-box text-center">
+                        <div class="content-wrapper">
+                            <h3 class="title-box-name">Our Services</h3>
+                            <div class="title-separator mx-auto"></div>
+                            <p class="text title-box-text">We provide you the best choices for you. Adjust it to your
+                                health needs and make sure you undergo treatment with our highly qualified doctors. Consult with us to determine which service is suitable for your health.</p>
+                        </div>
+                    </div>
+                    <!-- List of Services -->
+                    <div class="services-list">
+                        <!-- Service Item -->
+                        <div class="services-item">
+                            <div class="item-icon">
+                                <img src="{% static 'images/service-icon-1.png' %}" alt="Search Doctor Icon">
+                            </div>
+                            <h5 class="item-title fw-7">Search doctor</h5>
+                            <p class="text">Choose your doctor from thousands of specialists, general practitioners, and trusted hospitals.</p>
+                        </div>
+                        <!-- Repeat for other services -->
+                        <!-- ... -->
+                    </div>
+                    <!-- Learn More Button -->
+                    <div class="d-flex align-items-center justify-content-center services-main-btn">
+                        <button type="button" class="btn btn-primary-outline">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Healthcare Providers Section -->
+        <section class="sc-grid sc-grid-one">
+            <div class="container">
+                <div class="grid-content d-grid align-items-center">
+                    <div class="grid-img">
+                        <img src="{% static 'images/health-care-img.png' %}" alt="Healthcare Providers Image">
+                    </div>
+                    <div class="grid-text">
+                        <div class="content-wrapper text-start">
+                            <div class="title-box">
+                                <h3 class="title-box-name text-white">Leading Healthcare Providers</h3>
+                                <div class="title-separator mx-auto"></div>
+                            </div>
+                            <p class="text title-box-text text-white">Medimoor provides progressive, and affordable healthcare, accessible on mobile and online for everyone. To us, it's not just work. We take pride in the solutions we deliver.</p>
+                            <button type="button" class="btn btn-white-outline">Learn more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile Apps Download Section -->
+        <section class="sc-grid sc-grid-two">
+            <div class="container">
+                <div class="grid-content d-grid align-items-center">
+                    <div class="grid-img">
+                        <img src="{% static 'images/download-image.png' %}" alt="Download Mobile Apps Image">
+                    </div>
+                    <div class="grid-text">
+                        <div class="content-wrapper text-start">
+                            <div class="title-box">
+                                <h3 class="title-box-name">Download Our Mobile Apps</h3>
+                                <div class="title-separator mx-auto"></div>
+                            </div>
+                            <p class="text title-box-text">Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious forms, long calls, or administrative hassle) and securely.</p>
+                            <button type="button" class="btn btn-primary-outline">
+                                Download
+                                <img src="{% static 'images/arrow-down.svg' %}" alt="Download Arrow">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Feedback Section -->
+        <section class="sc-feedback">
+            <div class="container">
+                <div class="feedback-content">
+                    <div class="feedback-element">
+                        <img src="{% static 'images/element-img-3.png' %}" alt="Feedback Decoration 1">
+                    </div>
+                    <div class="feedback-element-2">
+                        <img src="{% static 'images/element-img-5.png' %}" alt="Feedback Decoration 2">
+                    </div>
+                    <div class="title-box text-center">
+                        <div class="content-wrapper">
+                            <h3 class="title-box-name text-white">What Our Customers Are Saying</h3>
+                            <div class="title-separator mx-auto"></div>
+                        </div>
+                    </div>
+                    <!-- Feedback Slider -->
+                    <div class="feedback-list feedback-slider owl-carousel owl-theme">
+                        <!-- Feedback Item -->
+                        <div class="feedback-item d-grid">
+                            <div class="item-left d-flex align-items-center">
+                                <div class="item-img">
+                                    <img src="{% static 'images/person-image.png' %}" alt="Customer Image">
+                                </div>
+                                <div class="item-info text-white">
+                                    <p class="fw-7 name">Edward Newgate</p>
+                                    <span class="designation fw-4">Founder Circle</span>
+                                </div>
+                            </div>
+                            <div class="item-right">
+                                <p class="text text-white">"Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedious forms, long calls, or administrative hassle) and securely."</p>
+                            </div>
+                        </div>
+                        <!-- Repeat for other feedback items -->
+                        <!-- ... -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles Section -->
+        <section class="sc-articles">
+            <div class="articles-shape">
+                <img src="{% static 'images/curve-shape-2.png' %}" alt="Articles Decoration">
+            </div>
+            <div class="container">
+                <div class="articles-content">
+                    <div class="articles-element">
+                        <img src="{% static 'images/element-img-2.png' %}" alt="Articles Decoration 2">
+                    </div>
+                    <div class="title-box text-center">
+                        <div class="content-wrapper">
+                            <h3 class="title-box-name">Check Out Our Latest Articles</h3>
+                            <div class="title-separator mx-auto"></div>
+                        </div>
+                    </div>
+                    <!-- Articles List -->
+                    <div class="articles-list d-flex flex-wrap justify-content-center">
+                        <!-- Article Item -->
+                        <article class="articles-item">
+                            <div class="item-img">
+                                <img src="{% static 'images/article-img-1.png' %}" alt="Article 1 Image">
+                            </div>
+                            <div class="item-body">
+                                <div class="item-title">Disease Detection, Check Up in the Laboratory</div>
+                                <p class="text">In this case, the role of the health laboratory is very important to do disease detection ...</p>
+                                <a href="#" class="item-link text-blue d-flex align-items-baseline">
+                                    <span class="item-link-text">Read more</span>
+                                    <span class="item-link-icon">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </article>
+                        <!-- Repeat for other articles -->
+                        <!-- ... -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End of Main Content Section -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <!-- Footer Links and Branding -->
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <h3>Clinic</h3>
+                </a>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <!-- Footer Branding -->
+            <div class="footer-branding">
+                <p>&copy; 2024 Clinic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Section -->
+
+</div>
+
+
+<!-- jquery cdn -->
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"></script>
+
+<!-- owl carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- custom js -->
+<script src="{% static 'js/script.js' %}"></script>
+
+<!--=============== Script for burger menu =============== -->
+<script>
+    const header = document.querySelector("header");
+
+    // make footer sticky
+    window.addEventListener("scroll", function(){
+        header.classList.toggle("sticky" , this.window.scrollY > 0 );
+    });
+    let menu = document.querySelector('#menu-icon');
+    let navmenu = document.querySelector('.navmenu');
+    menu.onclick = () =>{
+        menu.classList.toggle('bx-x');
+        navmenu.classList.toggle('open');
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+

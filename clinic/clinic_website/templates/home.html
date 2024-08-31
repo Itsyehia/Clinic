@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+
+    <!-- Icons for the website -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Custom CSS styling -->
+    <style>
+        /* Navigation menu link color */
+        .navmenu a {
+            color: white;
+        }
+
+        /* Root variables for colors and font family */
+        :root {
+            --clr-blue: #458ff6;
+            --clr-black: #000;
+            --clr-white: #fff;
+            --clr-gray: #7d7987;
+            --clr-dark-blue: #233348;
+            --clr-dark-purple: #1f1534;
+            --font-family-mulish: 'Mulish', sans-serif;
+            --transition-default: all 300ms ease-in-out;
+        }
+
+        /* Basic body styling */
+        body {
+            font-family: var(--font-family-mulish);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Form styling */
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: var(--clr-white);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Form heading styling */
+        form h2 {
+            color: var(--clr-dark-blue);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Form div styling */
+        form div {
+            margin-bottom: 15px;
+        }
+
+        /* Form label styling */
+        form label {
+            color: var(--clr-gray);
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* Form select element styling */
+        form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--clr-gray);
+            border-radius: 5px;
+        }
+
+        /* Form button styling */
+        form button {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--clr-blue);
+            color: var(--clr-white);
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition-default);
+        }
+    </style>
+
+</head>
+<body>
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!--==================== HEADER ====================-->
+<section class="header" style="height: auto;">
+    <!-- Sticky header with background color -->
+    <header class="sticky" style="background: var(--clr-blue);">
+        <!-- Logo with a greeting -->
+        <a href="#" class="logo" style="text-decoration: none;">
+            <h3>Hello, {{ user.username }}</h3>
+        </a>
+        <!-- Navigation menu -->
+        <ul class="navmenu">
+            <li><a href="/landing">Home</a></li>
+            <li><a href="#">Book</a></li>
+        </ul>
+        <!-- Navigation icons -->
+        <div class="nav-icon">
+            <!-- Search button -->
+            <a href="/search"><i class='bx bx-search-alt-2'></i></a>
+            <!-- Logout button -->
+            <a href="{% url 'logout' %}"><i class='bx bx-log-out-circle'></i></a>
+            <!-- Burger menu for mobile view -->
+            <div id="menu-icon">
+                <a href="#" class="menu" id="burger-menu"><i class='bx bx-menu'></i></a>
+            </div>
+        </div>
+    </header>
+</section>
+<!-- End of Header Section -->
+
+<!--==================== FORM ====================-->
+<!-- Form for searching doctors -->
+<form method="get" action="{% url 'search' %}">
+    <h2>Search for Doctors</h2>
+    <!-- Specialization dropdown -->
+    <div>
+        <label for="specialization">Specialization</label>
+        <select name="specialization" id="specialization">
+            <option value="Cardiology">Cardiology</option>
+            <option value="Neurology">Neurology</option>
+            <!-- Add more options if needed -->
+        </select>
+    </div>
+    <!-- Area dropdown -->
+    <div>
+        <label for="area">Area</label>
+        <select name="area" id="area">
+            <option value="Downtown">Downtown</option>
+            <option value="Uptown">Uptown</option>
+            <!-- Add more options if needed -->
+        </select>
+    </div>
+    <!-- Search button -->
+    <button type="submit">Search</button>
+</form>
+<!-- End of Form Section -->
+
+<!--==================== RESULTS ====================-->
+<!-- Placeholder for search results -->
+<div id="results">
+    <!-- Search results will be displayed here -->
+</div>
+
+{% endblock %}
+
+</body>
+</html>
