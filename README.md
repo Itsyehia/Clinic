@@ -21,18 +21,20 @@ The Doctors Hub Application is a comprehensive web application designed to facil
 ```plaintext
 clinic_management_system/
 │
-├── clinic/
+├── clinic_website/
 │   ├── migrations/
 │   ├── static/
 │   │   ├── css/
 │   │   ├── js/
 │   │   └── images/
 │   ├── templates/
+│   │   ├── registration/register.html
+│   │   ├── registration/login/html
 │   │   ├── base.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── landing.html
-│   │   └── doctor_details.html
+│   │   ├── doctor_details.html
+│   │   ├── home.html
+│   │   ├── index.html
+│   │   └── search_results.html
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
@@ -40,7 +42,7 @@ clinic_management_system/
 │   ├── urls.py
 │   ├── views.py
 │   └── tests.py
-├── clinic_management_system/
+├── clinic/
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
@@ -59,11 +61,11 @@ clinic_management_system/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/clinic-management-system.git
+   git clone https://github.com/itsyaya/clinic.git
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd clinic-management-system
+   cd clinic
    ```
 3. **Install dependencies:**
    ```bash
